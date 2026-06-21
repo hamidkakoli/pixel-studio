@@ -138,15 +138,33 @@ nav{
 ========================= */
 
 .hero{
+   .hero::before{
+    content:"";
+    position:absolute;
+    inset:-200px;
+    background:radial-gradient(circle, rgba(212,175,55,0.08), transparent 60%);
+    filter:blur(60px);
+    animation:floatGlow 6s ease-in-out infinite;
+    z-index:0;
+}
     min-height:90vh;
     display:flex;
     align-items:center;
     justify-content:center;
     text-align:center;
+    position:relative;
+    overflow:hidden;
+
+    /* 🌑 پس‌زمینه جدید */
+    background:
+        radial-gradient(circle at 30% 20%, rgba(212,175,55,0.10), transparent 45%),
+        radial-gradient(circle at 70% 80%, rgba(255,255,255,0.04), transparent 55%),
+        linear-gradient(180deg, #0f0f0f, #0b0b0b);
 }
 
 .hero-content{
-    max-width:900px;
+    position:relative;
+    z-index:2;
 }
 
 .hero h1{
@@ -959,5 +977,15 @@ footer{
     .btn{
         width:100%;
         margin:6px 0;
+    }
+}
+@keyframes floatGlow{
+    0%,100%{
+        transform:translateY(0px);
+        opacity:0.6;
+    }
+    50%{
+        transform:translateY(-20px);
+        opacity:0.9;
     }
 }
