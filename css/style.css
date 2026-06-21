@@ -1,0 +1,392 @@
+/* =========================
+   Gandomgoon Studio
+   Main Stylesheet
+========================= */
+
+:root{
+    --bg:#0f0f0f;
+    --card:#171717;
+    --border:#2a2a2a;
+    --gold:#d4af37;
+    --text:#ffffff;
+    --muted:#bdbdbd;
+    --radius:16px;
+    --transition:0.3s ease;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:var(--bg);
+    color:var(--text);
+    font-family:Tahoma, Arial, sans-serif;
+    line-height:1.8;
+}
+
+img{
+    max-width:100%;
+    display:block;
+}
+
+a{
+    text-decoration:none;
+    color:inherit;
+}
+
+ul{
+    list-style:none;
+}
+
+.container{
+    width:90%;
+    max-width:1200px;
+    margin:auto;
+}
+
+/* =========================
+   Header
+========================= */
+
+header{
+    position:sticky;
+    top:0;
+    z-index:1000;
+    background:#111;
+    border-bottom:1px solid var(--border);
+    backdrop-filter:blur(8px);
+}
+
+nav{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:18px 0;
+}
+
+.logo{
+    font-size:28px;
+    font-weight:bold;
+    color:var(--gold);
+    letter-spacing:1px;
+}
+
+.menu{
+    display:flex;
+    gap:24px;
+}
+
+.menu a{
+    transition:var(--transition);
+}
+
+.menu a:hover{
+    color:var(--gold);
+}
+
+/* =========================
+   Hero
+========================= */
+
+.hero{
+    min-height:90vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+}
+
+.hero-content{
+    max-width:900px;
+}
+
+.hero h1{
+    font-size:60px;
+    color:var(--gold);
+    margin-bottom:20px;
+}
+
+.hero p{
+    color:var(--muted);
+    font-size:18px;
+    max-width:700px;
+    margin:auto;
+}
+
+.btns{
+    margin-top:35px;
+}
+
+.btn{
+    display:inline-block;
+    padding:14px 30px;
+    border-radius:12px;
+    transition:var(--transition);
+    margin:8px;
+}
+
+.btn-primary{
+    background:var(--gold);
+    color:#000;
+    font-weight:bold;
+}
+
+.btn-primary:hover{
+    transform:translateY(-4px);
+}
+
+.btn-outline{
+    border:1px solid var(--gold);
+}
+
+.btn-outline:hover{
+    background:var(--gold);
+    color:#000;
+}
+
+/* =========================
+   Sections
+========================= */
+
+section{
+    padding:90px 0;
+}
+
+.section-title{
+    text-align:center;
+    margin-bottom:50px;
+}
+
+.section-title h2{
+    color:var(--gold);
+    font-size:40px;
+}
+
+.section-title p{
+    color:var(--muted);
+    margin-top:10px;
+}
+
+/* =========================
+   Services
+========================= */
+
+.services{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
+}
+
+.card{
+    background:var(--card);
+    border:1px solid var(--border);
+    border-radius:var(--radius);
+    padding:30px;
+    transition:var(--transition);
+}
+
+.card:hover{
+    transform:translateY(-6px);
+}
+
+.card h3{
+    color:var(--gold);
+    margin-bottom:15px;
+}
+
+.card p{
+    color:var(--muted);
+}
+
+/* =========================
+   Portfolio
+========================= */
+
+.portfolio{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:20px;
+}
+
+.portfolio-item{
+    height:230px;
+    background:#1b1b1b;
+    border:1px solid var(--border);
+    border-radius:var(--radius);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:#888;
+    transition:var(--transition);
+}
+
+.portfolio-item:hover{
+    transform:scale(1.02);
+}
+
+/* =========================
+   Pricing
+========================= */
+
+.pricing{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:25px;
+}
+
+.price-card{
+    background:var(--card);
+    border:1px solid var(--border);
+    border-radius:var(--radius);
+    padding:35px;
+    text-align:center;
+    transition:var(--transition);
+}
+
+.price-card:hover{
+    transform:translateY(-5px);
+}
+
+.price-card h3{
+    color:var(--gold);
+}
+
+.price{
+    font-size:42px;
+    color:var(--gold);
+    margin:20px 0;
+    font-weight:bold;
+}
+
+/* =========================
+   CTA
+========================= */
+
+.cta{
+    background:var(--card);
+    border-radius:20px;
+    text-align:center;
+    padding:70px 20px;
+    border:1px solid var(--border);
+}
+
+.cta h2{
+    color:var(--gold);
+    margin-bottom:15px;
+}
+
+.cta p{
+    color:var(--muted);
+    margin-bottom:25px;
+}
+
+/* =========================
+   Contact
+========================= */
+
+.contact-form{
+    max-width:700px;
+    margin:auto;
+}
+
+.form-group{
+    margin-bottom:20px;
+}
+
+.form-control{
+    width:100%;
+    padding:14px;
+    background:#1b1b1b;
+    border:1px solid var(--border);
+    color:white;
+    border-radius:10px;
+}
+
+textarea.form-control{
+    resize:vertical;
+    min-height:150px;
+}
+
+.form-control:focus{
+    outline:none;
+    border-color:var(--gold);
+}
+
+/* =========================
+   Footer
+========================= */
+
+footer{
+    border-top:1px solid var(--border);
+    text-align:center;
+    padding:35px;
+    color:#999;
+}
+
+/* =========================
+   Animation
+========================= */
+
+.fade-up{
+    opacity:0;
+    transform:translateY(30px);
+    transition:all .8s ease;
+}
+
+.fade-up.show{
+    opacity:1;
+    transform:translateY(0);
+}
+
+/* =========================
+   Responsive
+========================= */
+
+@media(max-width:992px){
+
+    .hero h1{
+        font-size:48px;
+    }
+}
+
+@media(max-width:768px){
+
+    .menu{
+        display:none;
+    }
+
+    .hero{
+        min-height:70vh;
+    }
+
+    .hero h1{
+        font-size:36px;
+    }
+
+    .hero p{
+        font-size:16px;
+    }
+
+    .section-title h2{
+        font-size:32px;
+    }
+}
+
+@media(max-width:480px){
+
+    .hero h1{
+        font-size:30px;
+    }
+
+    .btn{
+        width:100%;
+        margin:6px 0;
+    }
+}
